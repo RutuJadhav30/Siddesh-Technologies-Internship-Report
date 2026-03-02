@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flex Landing Page</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  line-height:1.6;
+}
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+  background:#0d1117;
+  color:white;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
+
+.nav-links{
+  display:flex;
+  gap:20px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:60px 40px;
+  gap:40px;
+}
+
+.hero-text{
+  flex:1;
+}
+
+.hero-text h1{
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+.hero-text p{
+  margin-bottom:20px;
+  color:#555;
+}
+
+.hero-text button{
+  padding:12px 20px;
+  border:none;
+  background:#2563eb;
+  color:white;
+  cursor:pointer;
+  border-radius:5px;
+}
+
+.hero-image{
+  flex:1;
+  text-align:center;
+}
+
+.hero-image img{
+  width:100%;
+  max-width:400px;
+}
+
+
+.features{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:40px;
+}
+
+.card{
+  flex:1;
+  background:#f1f5f9;
+  padding:30px;
+  border-radius:10px;
+  text-align:center;
+  font-weight:bold;
+}
+
+.footer{
+  background:#0d1117;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:30px;
+}
+
+@media(max-width:768px){
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .features{
+    flex-direction:column;
+  }
+
+  .navbar{
+    flex-direction:column;
+    gap:10px;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">MyBrand</div>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Features</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Build Smarter. Grow Faster.</h1>
+    <p>Create powerful and scalable solutions using modern technologies.</p>
+    <button>Get Started</button>
+  </div>
+
+  <div class="hero-image">
+    <img src="https://via.placeholder.com/400" alt="hero image">
+  </div>
+</section>
+
+<section class="features">
+  <div class="card">⚡ Fast</div>
+  <div class="card">📱 Responsive</div>
+  <div class="card">🔒 Secure</div>
+</section>
+
+<footer class="footer">
+  © 2026 MyBrand. All rights reserved.
+</footer>
+
+</body>
+</html>

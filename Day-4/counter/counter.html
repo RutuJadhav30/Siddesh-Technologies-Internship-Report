@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Counter</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.card{
+  background:white;
+  padding:40px;
+  border-radius:15px;
+  text-align:center;
+  width:320px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h2{
+  margin-bottom:20px;
+}
+
+.count{
+  font-size:50px;
+  margin:20px 0;
+  font-weight:bold;
+  color:#333;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+button{
+  border:none;
+  padding:12px 18px;
+  font-size:16px;
+  border-radius:8px;
+  cursor:pointer;
+  color:white;
+  transition:0.2s;
+}
+
+.increment{ background:#22c55e; }
+.decrement{ background:#ef4444; }
+.reset{ background:#3b82f6; }
+
+button:hover{
+  transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>Counter</h2>
+
+  <div class="count" id="count">0</div>
+
+  <div class="buttons">
+    <button class="increment" onclick="increment()">+</button>
+    <button class="decrement" onclick="decrement()">−</button>
+    <button class="reset" onclick="resetCount()">Reset</button>
+  </div>
+</div>
+
+<script>
+let count = 0;
+
+function increment(){
+  count++;
+  document.getElementById("count").innerText = count;
+}
+
+function decrement(){
+  count--;
+  document.getElementById("count").innerText = count;
+}
+
+function resetCount(){
+  count = 0;
+  document.getElementById("count").innerText = count;
+}
+</script>
+
+</body>
+</html>
