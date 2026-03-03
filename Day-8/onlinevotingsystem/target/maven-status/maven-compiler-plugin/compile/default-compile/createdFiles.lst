@@ -1,9 +1,11 @@
 com\voting\onlinevotingsystem\entity\User.class
-com\voting\onlinevotingsystem\config\DataInitializer.class
-com\voting\onlinevotingsystem\controller\AuthController.class
 com\voting\onlinevotingsystem\controller\UserController.class
 com\voting\onlinevotingsystem\OnlinevotingsystemApplication.class
+com\voting\onlinevotingsystem\repository\CandidateRepository.class
+com\voting\onlinevotingsystem\repository\ElectionRepository.class
+com\voting\onlinevotingsystem\entity\Candidate.class
 com\voting\onlinevotingsystem\controller\AdminController.class
+com\voting\onlinevotingsystem\entity\Election.class
 com\voting\onlinevotingsystem\config\SecurityConfig.class
 com\voting\onlinevotingsystem\service\CustomUserDetailsService.class
 com\voting\onlinevotingsystem\repository\UserRepository.class

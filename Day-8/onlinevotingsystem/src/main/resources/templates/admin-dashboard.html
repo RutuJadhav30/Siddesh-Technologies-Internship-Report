@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+</head>
+<body>
+
+<div class="layout">
+
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li><a th:href="@{/admin/dashboard}">Dashboard</a></li>
+            <li><a th:href="@{/admin/start}">Start Election</a></li>
+            <li><a th:href="@{/admin/stop}">Stop Election</a></li>
+        </ul>
+        <a th:href="@{/logout}" class="logout">Logout</a>
+    </div>
+
+    <div class="main">
+
+        <div class="header">
+            <h1>Manage Candidates</h1>
+        </div>
+
+        <div class="card">
+            <form th:action="@{/admin/addCandidate}" method="post">
+                <input type="text" name="name" placeholder="Candidate Name" required>
+                <button class="btn">Add Candidate</button>
+            </form>
+        </div>
+
+        <br>
+
+        <div class="card-grid">
+            <div class="card" th:each="c : ${candidates}">
+                <h3 th:text="${c.name}"></h3>
+                <p>Votes: <span th:text="${c.voteCount}"></span></p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
